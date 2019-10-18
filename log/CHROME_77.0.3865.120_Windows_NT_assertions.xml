@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="1"
+            failures="1"
+            tests="1">
+
+  <testsuite name="assertions"
+    errors="1" failures="1" hostname="" id="" package="assertions" skipped="0"
+    tests="1" time="6.658" timestamp="">
+  
+    <testcase name="click example test" classname="assertions" time="6.658" assertions="2">
+
+      <failure message="Expected element &lt;#rcnt&gt; text to contain: &#34;nightwatchjs.org/&#34; - element was not found - expected [0;32m&#34;present&#34;[0m but got: [0;31m&#34;not present&#34;[0m">    at Object.click example test (D:\Development\servers\nightwatch\test\one\assertions.js:16:13)
+    at process._tickCallback (internal/process/next_tick.js:68:7)</failure>
+
+    <failure message="    at Object.click example test (D:\Development\servers\nightwatch\test\one\assertions.js:16:13)">    at process._tickCallback (internal/process/next_tick.js:68:7)</failure>
+    </testcase>
+  
+
+  
+
+  
+  </testsuite>
+</testsuites>

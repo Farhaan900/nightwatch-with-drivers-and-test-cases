@@ -1,0 +1,65 @@
+11:03:39.579 INFO - Selenium build info: version: '3.3.1', revision: '5234b32'
+11:03:39.580 INFO - Launching a standalone Selenium Server
+2019-10-18 11:03:39.611:INFO::main: Logging initialized @349ms to org.seleniumhq.jetty9.util.log.StdErrLog
+11:03:39.673 INFO - Driver class not found: com.opera.core.systems.OperaDriver
+11:03:39.674 INFO - Driver provider com.opera.core.systems.OperaDriver registration is skipped:
+Unable to create new instances on this machine.
+11:03:39.674 INFO - Driver class not found: com.opera.core.systems.OperaDriver
+11:03:39.674 INFO - Driver provider com.opera.core.systems.OperaDriver is not registered
+11:03:39.681 INFO - Driver provider org.openqa.selenium.safari.SafariDriver registration is skipped:
+ registration capabilities Capabilities [{browserName=safari, version=, platform=MAC}] does not match the current platform WIN10
+2019-10-18 11:03:39.742:INFO:osjs.Server:main: jetty-9.2.20.v20161216
+2019-10-18 11:03:39.791:INFO:osjsh.ContextHandler:main: Started o.s.j.s.ServletContextHandler@685cb137{/,null,AVAILABLE}
+java.lang.RuntimeException: java.net.BindException: Address already in use: bind
+	at org.openqa.selenium.remote.server.SeleniumServer.boot(SeleniumServer.java:149)
+	at org.openqa.grid.selenium.GridLauncherV3$1.launch(GridLauncherV3.java:238)
+	at org.openqa.grid.selenium.GridLauncherV3.main(GridLauncherV3.java:99)
+Caused by: java.net.BindException: Address already in use: bind
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Unknown Source)
+	at sun.nio.ch.Net.bind(Unknown Source)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(Unknown Source)
+	at sun.nio.ch.ServerSocketAdaptor.bind(Unknown Source)
+	at org.seleniumhq.jetty9.server.ServerConnector.open(ServerConnector.java:298)
+	at org.seleniumhq.jetty9.server.AbstractNetworkConnector.doStart(AbstractNetworkConnector.java:80)
+	at org.seleniumhq.jetty9.server.ServerConnector.doStart(ServerConnector.java:236)
+	at org.seleniumhq.jetty9.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+	at org.seleniumhq.jetty9.server.Server.doStart(Server.java:431)
+	at org.seleniumhq.jetty9.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+	at org.openqa.selenium.remote.server.SeleniumServer.boot(SeleniumServer.java:147)
+	... 2 more
+Usage: <main class> [options]
+  Options:
+    --version, -version
+       Displays the version and exits.
+       Default: false
+    -browserTimeout
+       <Integer> in seconds : number of seconds a browser session is allowed to
+       hang while a WebDriver command is running (example: driver.get(url)). If the
+       timeout is reached while a WebDriver command is still processing, the session
+       will quit. Minimum value is 60. An unspecified, zero, or negative value means
+       wait indefinitely.
+       Default: 0
+    -debug
+       <Boolean> : enables LogLevel.FINE.
+       Default: false
+    -jettyThreads, -jettyMaxThreads
+       <Integer> : max number of threads for Jetty. An unspecified, zero, or
+       negative value means the Jetty default value (200) will be used.
+    -log
+       <String> filename : the filename to use for logging. If omitted, will log
+       to STDOUT
+    -port
+       <Integer> : the port number the server will use.
+       Default: 4444
+    -role
+       <String> options are [hub], [node], or [standalone].
+       Default: standalone
+    -timeout, -sessionTimeout
+       <Integer> in seconds : Specifies the timeout before the server
+       automatically kills a session that hasn't had any activity in the last X seconds. The
+       test slot will then be released for another test to use. This is typically
+       used to take care of client crashes. For grid hub/node roles, cleanUpCycle
+       must also be set.
+       Default: 1800
+
